@@ -1,6 +1,6 @@
 # FCM Send
 
-![Firebase Cloud Messaging](./img/fcm.png "Firebase Cloud Messaging")
+![Firebase Cloud Messaging](https://github.com/MFori/apify-fcm-send/blob/master/img/fcm.png?raw=true "Firebase Cloud Messaging")
 
 This actor can be used as integration with Firebase Cloud Messaging. It sends a message to a device, group of
 devices or topics. The message can be fully customized supporting all FCM options.
