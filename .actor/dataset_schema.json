@@ -1,0 +1,34 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "hotels": {
+      "title": "Overview",
+      "description": "Overview of sent messages",
+      "transformation": {
+        "fields": [
+          "messageId",
+          "success",
+          "error"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "messageId": {
+            "label": "Message ID",
+            "format": "text"
+          },
+          "success": {
+            "label": "Successfully sent",
+            "format": "boolean"
+          },
+          "error": {
+            "label": "Error message",
+            "format": "text"
+          }
+        }
+      }
+    }
+  }
+}

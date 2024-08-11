@@ -1,0 +1,74 @@
+{
+  "title": "FCM send",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "serviceAccountKey": {
+      "title": "Service Account Key",
+      "type": "string",
+      "description": "Service account key in JSON format. You can get it from Firebase Console -> Project Settings -> Service accounts -> Generate new private key.",
+      "editor": "textarea"
+    },
+    "deviceTokens": {
+      "title": "Device Tokens",
+      "type": "array",
+      "description": "Array of device tokens to send the message to.",
+      "items": {
+        "type": "string"
+      },
+      "editor": "stringList"
+    },
+    "topic": {
+      "title": "Topic",
+      "type": "string",
+      "description": "Topic to send the message to.",
+      "editor": "textfield"
+    },
+    "condition": {
+      "title": "Condition",
+      "type": "string",
+      "description": "Condition to send the message to.",
+      "editor": "textfield"
+    },
+    "notification": {
+      "title": "Notification",
+      "description": "Notification object to send. See https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#resource:-message for more details.",
+      "type": "object",
+      "editor": "json"
+    },
+    "data": {
+      "title": "Data",
+      "description": "Data object to send. See https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#resource:-message for more details.",
+      "type": "object",
+      "editor": "json"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Android specific options. See https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#androidconfig for more details.",
+      "type": "object",
+      "editor": "json"
+    },
+    "webPush": {
+      "title": "WebPush",
+      "description": "WebPush specific options. See https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#webpushconfig for more details.",
+      "type": "object",
+      "editor": "json"
+    },
+    "apns": {
+      "title": "APNs",
+      "description": "APNs specific options. See https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#apnsconfig for more details.",
+      "type": "object",
+      "editor": "json"
+    },
+    "fcmOptions": {
+      "title": "FCM Options",
+      "description": "FCM options. See https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#fcmoptions for more details.",
+      "type": "object",
+      "editor": "json"
+    }
+  },
+  "required": [
+    "serviceAccountKey",
+    "notification"
+  ]
+}

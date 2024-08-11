@@ -1,0 +1,15 @@
+{
+	"actorSpecification": 1,
+	"name": "send-fcm",
+	"title": "Send FCM",
+	"description": "Actor for sending Firebase Cloud Messaging (FCM) messages aka push notifications.",
+	"version": "0.1",
+	"meta": {
+		"templateId": "ts-start"
+	},
+	"input": "./input_schema.json",
+	"storages": {
+		"dataset": "./dataset_schema.json"
+	},
+	"dockerfile": "./Dockerfile"
+}
