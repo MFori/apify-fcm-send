@@ -34,10 +34,14 @@ if (!input) throw new Error("Input is missing!");
 
 const {serviceAccountKey} = input;
 
-const serviceAccount = JSON.parse(serviceAccountKey);
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-});
+try {
+    const serviceAccount = JSON.parse(serviceAccountKey);
+    admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount)
+    });
+} catch (e: any) {
+    throw new Error(`Failed to initialize Firebase Admin SDK: ${e.message}`);
+}
 
 let message: BaseMessage = {
     notification: input.notification,
