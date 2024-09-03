@@ -8,7 +8,8 @@
       "type": "string",
       "description": "Service account key in JSON format. You can get it from Firebase Console -> Project Settings -> Service accounts -> Generate new private key.",
       "editor": "textarea",
-      "example": "{\n  \"type\": \"service_account\",\n  \"project_id\": \"your-project-id\",\n  \"private_key_id\": \"someprivatekeyid1234567890abcdef\",\n  \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASC...\\n-----END PRIVATE KEY-----\\n\",\n  \"client_email\": \"firebase-adminsdk-abcde@your-project-id.iam.gserviceaccount.com\",\n  \"client_id\": \"123456789012345678901\",\n  \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\n  \"token_uri\": \"https://oauth2.googleapis.com/token\",\n  \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\n  \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-abcde%40your-project-id.iam.gserviceaccount.com\"\n}\n"
+      "example": "{\n  \"type\": \"service_account\",\n  \"project_id\": \"your-project-id\",\n  \"private_key_id\": \"someprivatekeyid1234567890abcdef\",\n  \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASC...\\n-----END PRIVATE KEY-----\\n\",\n  \"client_email\": \"firebase-adminsdk-abcde@your-project-id.iam.gserviceaccount.com\",\n  \"client_id\": \"123456789012345678901\",\n  \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\n  \"token_uri\": \"https://oauth2.googleapis.com/token\",\n  \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\n  \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-abcde%40your-project-id.iam.gserviceaccount.com\"\n}\n",
+      "prefill": "{\n  \"type\": \"service_account\",\n  \"project_id\": \"your-project-id\",\n  \"private_key_id\": \"someprivatekeyid1234567890abcdef\",\n  \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASC...\\n-----END PRIVATE KEY-----\\n\",\n  \"client_email\": \"firebase-adminsdk-abcde@your-project-id.iam.gserviceaccount.com\",\n  \"client_id\": \"123456789012345678901\",\n  \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\n  \"token_uri\": \"https://oauth2.googleapis.com/token\",\n  \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\n  \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-abcde%40your-project-id.iam.gserviceaccount.com\"\n}\n"
     },
     "deviceTokens": {
       "title": "Device Tokens",
@@ -38,6 +39,10 @@
       "type": "object",
       "editor": "json",
       "example": {
+        "title": "Title",
+        "body": "Hello, world!"
+      },
+      "prefill": {
         "title": "Title",
         "body": "Hello, world!"
       }
