@@ -30,9 +30,12 @@ interface Result {
 }
 
 const input = await Actor.getInput<Input>();
-if (!input) throw new Error("Input is missing!");
+if (!input) {
+    await Actor.exit('Input is missing!', { exitCode: 1 });
+    process.exit(1);
+}
 
-const {serviceAccountKey} = input;
+const { serviceAccountKey } = input;
 
 try {
     const serviceAccount = JSON.parse(serviceAccountKey);
@@ -40,7 +43,7 @@ try {
         credential: admin.credential.cert(serviceAccount)
     });
 } catch (e: any) {
-    throw new Error(`Failed to initialize Firebase Admin SDK: ${e.message}`);
+    await Actor.exit(`Failed to initialize Firebase Admin SDK: ${e.message}`, { exitCode: 1 });
 }
 
 let message: BaseMessage = {
