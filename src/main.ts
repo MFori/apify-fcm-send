@@ -43,7 +43,7 @@ try {
         credential: admin.credential.cert(serviceAccount)
     });
 } catch (e: any) {
-    await Actor.exit(`Failed to initialize Firebase Admin SDK: ${e.message}`, { exitCode: 1 });
+    await Actor.exit(`Failed to initialize Firebase Admin SDK: ${e.message}`, { exitCode: 0 });
 }
 
 let message: BaseMessage = {
@@ -91,7 +91,8 @@ if (input.deviceTokens && input.deviceTokens.length === 1) {
     message = {condition: input.condition, ...message} as ConditionMessage;
     result = await singleMessageToResult(messaging.send(message as ConditionMessage));
 } else {
-    throw new Error("deviceTokens, topic or condition must be provided!");
+    await Actor.exit(`deviceTokens, topic or condition must be provided!`, { exitCode: 1 });
+    result = [];
 }
 
 await Actor.pushData(result);
